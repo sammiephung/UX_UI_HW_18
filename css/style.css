@@ -20,6 +20,18 @@ h1 {
     margin-bottom: 10px;
 }
 
+h2 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 170%;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2A7DE1;
+    margin-bottom: 7px;
+}
+
 h3 {
     font-family: 'Red Hat Display', sans-serif;
     font-style: normal;
@@ -28,7 +40,6 @@ h3 {
     line-height: 170%;
     color: #1B1B1E;
     margin-bottom: 25px;
-
 }
 
 p {
@@ -119,6 +130,79 @@ a {
     padding: 0px;
 }
 
+/* --------------------------------------------- Work section --------------------------------------------- */
+
+.myWorkGrid {
+    display: grid;
+    margin: 100px 15%;
+    margin-bottom: 0;
+    background-color: white;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "imageOne descripOne"
+    "imageTwo descripTwo"
+    "imageThree descripThree"
+    ;
+}
+
+#imageOne {
+    grid-area: imageOne;
+    width: 90%;
+    height: 350px;
+    background-color: lightgray;
+    margin-bottom: 100px;
+}
+
+#imageTwo {
+    grid-area: imageTwo;
+    width: 90%;
+    height: 350px;
+    background-color: lightgray;
+}
+
+#imageThree {
+    grid-area: imageThree;
+    width: 90%;
+    height: 350px;
+    background-color: lightgray;
+}
+
+#descripOne {
+    grid-area: descripOne;
+    width: 90%;
+}
+
+#descripTwo {
+    grid-area: descripTwo;
+    width: 90%;
+}
+
+#descripThree {
+    grid-area: descripThree;
+    width: 90%;
+}
+
+.caseStudyButton {
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 170%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 6px;
+    margin-top: 20px;
+    width: 212px;
+    height: 57px;
+    background: #FAA916;
+    border-radius: 50px;
+}
 
 /* --------------------------------------------- Footer section --------------------------------------------- */
 
@@ -161,3 +245,75 @@ footer {
     min-width: 280px;
 }
 
+/* ------------------------------------------- Mobile 600px screen ------------------------------------------ */
+
+@media only screen and (max-width: 600px) {
+
+/* ----------------------------------- Hero Section ----------------------------------- */
+
+.heroSection {
+    height: 80vh;
+}
+
+.headline {
+    position: absolute;
+    top: 25%;
+    width: 70%;
+}
+
+.profile img{
+    display: none;
+}
+
+/* ------------------------------------ Work Grid ------------------------------------- */
+
+
+.myWorkGrid {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "imageOne"
+    "descripOne"
+    "imageTwo"
+    "descripTwo"
+    "imageThree"
+    "descripThree"
+    ;
+    }
+
+#imageOne {
+    grid-area: imageOne;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#imageTwo {
+    grid-area: imageTwo;
+    width: 100%;
+    height: 350px;
+    background-color: lightgray;
+}
+
+#imageThree {
+    grid-area: imageThree;
+    width: 100%;
+    height: 350px;
+    background-color: lightgray;
+}
+
+#descripOne {
+    grid-area: descripOne;
+    width: 100%;
+}
+
+#descripTwo {
+    grid-area: descripTwo;
+    width: 100%;
+}
+
+#descripThree {
+    grid-area: descripThree;
+    width: 100%;
+}
+
+}
